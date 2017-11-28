@@ -1,0 +1,16 @@
+# MD-include
+
+Denna funkade för include i första-sidan
+[include](1_intro/test_include.md)
+
+Denna funkade för include i en md i annan mapp, fast nu märkte jag att detta bara funkar lokalt ej på server!
+[include](../1_intro/test_include.md)
+
+# Boxar
+
+Se text-exp ".wbox" för att se alla möjliga boxar jag skapat...
+går bra att göra orden så första bokstav är stor
+
+# Mappar
+
+Börja ej mappar med "_" för github ser möjligen sånna som jekyll-pre-kompilering...

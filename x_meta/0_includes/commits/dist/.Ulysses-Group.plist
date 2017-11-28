@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>childOrder</key>
+	<array>
+		<string>javascripts</string>
+		<string>stylesheets</string>
+	</array>
+	<key>createMarkedFile</key>
+	<integer>0</integer>
+	<key>resolutionData</key>
+	<dict>
+		<key>childOrder</key>
+		<dict>
+			<key>javascripts</key>
+			<dict>
+				<key>lastModification</key>
+				<real>457190864</real>
+				<key>version</key>
+				<dict>
+					<key>legacy-457190864.000000</key>
+					<integer>1</integer>
+				</dict>
+			</dict>
+			<key>stylesheets</key>
+			<dict>
+				<key>lastModification</key>
+				<real>457190864</real>
+				<key>version</key>
+				<dict>
+					<key>legacy-457190864.000000</key>
+					<integer>1</integer>
+				</dict>
+			</dict>
+		</dict>
+		<key>createMarkedFile</key>
+		<real>457190864</real>
+		<key>sheetOrder</key>
+		<real>518951263.97412699</real>
+	</dict>
+	<key>sheetOrder</key>
+	<string>title</string>
+	<key>storeFormatVersion</key>
+	<integer>1</integer>
+	<key>versioning</key>
+	<dict>
+		<key>childOrder</key>
+		<dict>
+			<key>ecc1f31f0e2c32e316de501ed4efa414c78e49132449d7332d3162391f396756</key>
+			<integer>1</integer>
+		</dict>
+		<key>createMarkedFile</key>
+		<dict>
+			<key>ecc1f31f0e2c32e316de501ed4efa414c78e49132449d7332d3162391f396756</key>
+			<integer>1</integer>
+		</dict>
+		<key>sheetOrder</key>
+		<dict>
+			<key>ecc1f31f0e2c32e316de501ed4efa414c78e49132449d7332d3162391f396756</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

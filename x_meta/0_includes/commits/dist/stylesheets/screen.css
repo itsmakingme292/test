@@ -1,0 +1,54 @@
+@import url("//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+
+.commit-author-info {
+margin-bottom:12px;
+display: list-item;
+list-style-type: disc; 
+list-style-position: outside;
+
+}
+
+/* nedan är en fulfix för att få bort mellanslag innan datum, oklart hur detta blev dock, får se när det står något här som inte börjar med en siffra */
+.commit-date {
+margin-left:-5px;
+}
+
+#latest-commits-widget ul#commit-history {
+padding-left: 32px !important;
+}
+
+ .commit-avatar, .commit-sha, .commit-author {
+display:none;
+ }
+ 
+ /* line 57, ../../src/scss/screen.scss */
+#latest-commits-widget {
+
+    width: 100%;
+ font: 17px;
+ font-family: "Lora", Georgia;
+ line-height: 1.5 !important;
+ 
+}
+
+/* line 90, ../../src/scss/screen.scss */
+#latest-commits-widget ul#commit-history {
+  padding-left: 0;
+  margin: 0;
+}
+
+.commit-message.a {
+display:list;
+}
+
+A:link {text-decoration: none; color: #428bca !important;}
+A:visited {text-decoration: none; color: #428bca !important;}
+A:active {text-decoration: none; color: #428bca !important;}
+A:hover {text-decoration: underline; color: #428bca !important; }
+
+b {
+
+  font-weight: normal !important;
+  font-style: italic;
+
+}
