@@ -1,4 +1,4 @@
-<script async defer src="//hypothes.is/embed.js"></script>
+
 
 # SAM01b
 
