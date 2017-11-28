@@ -1,0 +1,480 @@
+$skala: 1.26;
+$mindre-headings-ihpone: 0.7;
+$body-text-och-margin: 17px;
+
+/* BERÄKNAT UTIFRÅN h1, kommentera ut, antingen denna eller nedan */
+
+/* 
+$h1-storlek: 44px;
+$h2-storlek: $h1-storlek/$skala;
+$h3-storlek: $h2-storlek/$skala;
+$h4-storlek: $h3-storlek/$skala;
+ */
+
+
+/* BERÄKNAT UTIFRÅN Body */
+
+$h4-storlek: $body-text-och-margin * $skala;
+$h3-storlek: $h4-storlek * $skala;
+$h2-storlek: $h3-storlek * $skala;
+$h1-storlek: $h2-storlek * $skala;
+
+
+
+@import url("//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+
+body, code  {
+    font-family:"Lora", Georgia, "Times New Roman", Times, serif;
+    font-size: $body-text-och-margin;
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #f9f9f9
+}
+
+
+blockquote blockquote   {
+border:0px;
+margin: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+
+blockquote {
+background:#F1F1F1;
+border-radius: 4px;
+padding:6px 24px;
+margin-bottom: 24px;
+margin-top: 24px;
+margin-left:24px;
+margin-right: 24px;
+border-left:5px solid #C2DAEE;
+border-right:1px solid #E6E6E6;
+border-bottom:1px solid #E6E6E6;
+border-top:1px solid #E6E6E6;
+
+
+}
+
+ /* HEADLINES storlekar */
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+    font-weight: 700;
+    line-height: 1.1
+}
+h1,
+.h1 {
+    font-size: $h1-storlek
+}
+
+h2,
+.h2 {
+    /* font-size: 36px */
+    font-size:$h2-storlek
+}
+h3,
+.h3 {
+/*     font-size: 29px */
+    font-size:$h3-storlek
+}
+h4,
+.h4 {
+/*     font-size: 22px */
+    font-size:$h4-storlek
+}
+h5,
+.h5 {
+    font-size:$body-text-och-margin
+}
+h6,
+.h6 {
+    font-size: 15px
+
+}
+.page-header {
+    padding-bottom: 11px;
+    margin: 48px 0 24px;
+    border-bottom: 1px solid #eee
+}
+
+ /* MARGINALER */
+
+p {
+margin-bottom:$body-text-och-margin;
+margin-top:$body-text-och-margin;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+margin-bottom:$body-text-och-margin;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 24px;
+}
+
+/* ovanstående margin-top och nedanstående padding-top måste vara samma, på så vis är det samma avstånd ovanför och under strecken som ligger ovanför h2 */
+
+h2 { border-top: 1px solid #eee;  padding-top: 24px;}
+
+h2:first-of-type {
+margin-top:12px;
+border-top: 0px ;
+padding-top: 0px;
+}
+
+p:first-of-type {
+margin-top: 12px;
+}
+
+h4,
+h5,
+h6 {
+    margin-top: 24px;
+}
+
+h2 {
+margin-bottom:20px;
+}
+
+/* OBS OBS OBS, om margin bottom-margin för H2 ändras, måste jag ta bort minus-margin nedan, detta är alltså den lilla "gå upp"-pilen som ligger under h2 på ipad/iphone */
+
+.visible-xs.visible-sm.jumplink {
+
+margin-top: -8px;
+
+}
+
+
+
+
+
+/* LISTOR */
+
+/* här är mellanrum mellan en hel lista och en paragraf ovan */ 
+ul,
+ol {
+    margin-top: 12px;
+    
+/* här är mellan-rum mellan punkter */
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol, 
+ol li, 
+body ul li {
+ 	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Nedan är för punkter som har flera punkter under sig ska ha större mellanrum till nästa huvudpunkt */
+
+ul:last-child {
+margin-bottom:20px; 
+/* ändra denna till 24?*/
+}
+
+/* nedan gör så att det bara är huvudpunkter med child-punkter som får extra mellanrum. OBS: denna måste vara samma som marginal jag satt mellan alla punkter... */ 
+
+ul ul ul:last-child {
+margin-bottom:10px; 
+}
+
+/* Nedan vet jag inte vad det är */
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none
+}
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px
+}
+
+/* Nedan är för att ovan inte ska fucka upp sammanhängande listor med 1. 2. och under-delar */
+
+
+ol ul:last-child{
+margin-top: 0px;
+margin-bottom:0px; 
+}
+
+/* Nedan gör att listor ser likadana ut oberoende av radbrytningar */
+
+ol p, ul p {
+margin-bottom: 0px;
+margin-top: 0px;
+}
+
+
+/* Nedan är till för om det blir kokko med huvud- och sidomenyn -1 är för att man annars ser en liten strimma av vitt, men nu lyckas jag inte få till vertical centrering...*/
+
+ul.list-group li, ul.list-group, ul.list-group p {margin-top:0px !important; }
+
+.dropdown {margin-top:0px; margin-bottom:0px} /* Detta är själva menyn i menyn */
+ul.navbar-nav {margin-top:0px; margin-bottom:-1px;}
+
+/* Nedan är avstånd för header i dropdown (grupper)*/
+.dropdown-header {
+margin-top: 8px;
+margin-bottom: 0px;
+}
+
+.divider {
+margin-bottom:12px !important;
+}
+
+
+/* Nedan är allt "haxxorz" */
+
+
+    .anchor-highlight {
+        font-size: 0.7em;
+        margin-left: 0.25em;
+    }
+    /* for pageContentMenu */
+    #md-page-menu {
+            position: static;
+    }
+    #md-page-menu a.active {
+        /* background-color: rgba(0, 0, 0, 0.01); */
+        font-weight: bold;
+        padding-left: 6px;
+
+    }
+    @media (min-width: 985px) {
+        #md-page-menu.affix {
+            position: fixed;
+        }
+    }
+    @media (max-width: 992px) {
+        a.forkmeongithub {
+            display: none;
+        }
+    }
+    @media (max-width: 985 px) {
+        /* don't use floating for smaller screens */
+        .md-float-left .col-sm-8, .md-float-left .col-sm-4, .md-float-left .col-sm-2 {
+            width: 100%;
+            max-width: !important;
+            min-width: 100%;
+        }
+        .md-float-right .col-sm-8, .md-float-right .col-sm-4, .md-float-right .col-sm-2 {
+            width: 100%;
+            max-width: !important;
+            min-width: 100%;
+        }
+    }
+
+    .md-floatenv .md-text {
+        /* md-text is not of md-col-* but needs the spacing */
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    /* float images */
+    .md-float-left .col-sm-8, .md-float-left .col-sm-4, .md-float-left .col-sm-2 {
+        width: auto;
+    }
+    .md-float-right .col-sm-8, .md-float-right .col-sm-4, .md-float-right .col-sm-2 {
+        float: right !important;
+        width: auto;
+    }
+    #md-all .md-copyright-footer {
+        background-color: !important;
+        font-size: smaller;
+        padding: 1em;
+    }
+    
+        
+    @media print {
+    	#md-main-navbar, #md-page-menu, .annotator-frame, .annotator-toolbar, .annotator-bucket-bar, .visible-xs.visible-sm.jumplink, .annotator-adder {
+    	display:none;
+    	}
+    	#md-content.col-md-9 {
+    	float: none;
+    	width: 100%;
+    	margin-left: auto;
+    	margin-right: auto;
+    	}
+    	#md-body, .page-header {
+    	width: 100% !important;
+    	margin-left: auto !important;
+    	margin-right: auto !important;
+    	margin-top:0px !important;
+    
+    	}
+    	p, .md-text p, p.md-text {font-size: 12pt !important;}
+    } 
+/* Nedan tar bort Hypothesis från mobila enheter */
+
+@media only screen 
+and (min-device-width : 1px) 
+and (max-device-width : 985px) {
+
+.annotator-frame, .annotator-toolbar, .annotator-bucket-bar, .annotator-adder { display: none; }
+
+.annotator-adder {visibility: hidden; }
+
+}
+
+
+
+@media only screen 
+and (min-device-width : 740px) 
+and (max-device-width : 985px) {
+
+ul.nav.navbar-nav {
+height:100% !important;
+max-height:100% !important;
+}
+
+.navbar-collapse, .nav navbar-nav {
+max-height: 100% !important;
+}
+
+}
+
+@media only screen 
+and (max-device-width : 740px)  {
+
+ul.nav.navbar-nav, .navbar-collapse, .nav navbar-nav {
+max-height: 460px !important;   
+}
+
+}
+
+@media only screen 
+and (max-device-width : 414px)  {
+
+
+/* Ha annan storlek på h1 etc här för iphone. Kör med sass-variabler och gånger */
+
+h1,
+.h1 {
+    font-size: $h1-storlek * $mindre-headings-ihpone
+}
+
+h2,
+.h2 {
+    /* font-size: 36px */
+    font-size:$h2-storlek * $mindre-headings-ihpone
+}
+h3,
+.h3 {
+/*     font-size: 29px */
+    font-size:$h3-storlek * $mindre-headings-ihpone
+}
+h4,
+.h4 {
+/*     font-size: 22px */
+    font-size:$body-text-och-margin
+}
+
+}
+/* padding för allt utom iphone/smartphone + ipad*/ 
+
+@media only screen 
+and (min-device-width : 992px) 
+ {
+#md-content.col-md-9 {
+padding-left: 50px;
+}
+
+#md-body{
+padding-left: 22px;
+padding-right: 22px;
+
+}
+.panel {
+opacity: 0.8;
+}
+
+}    
+
+
+
+/* padding för ipad */ 
+
+@media only screen 
+and (min-device-width : 740px) 
+and (max-device-width : 985px)
+ {
+#md-body{
+padding-left: 40px;
+padding-right: 40px;
+}
+
+}     
+ 
+ /* EGET FÖRSÖK TILL ATT FIXA max-width för sidan */
+ 
+ /* hela sidan = #md-all */
+ 
+#md-body{
+max-width:992px;
+margin-left:auto;
+margin-right:auto;
+}
+
+
+/* OVANSTÅENDE är alltså HELT inlagt av mig */
+ 
+
+/* Nedan är för att göra indent på båda rader i sidomenyn på del som är aktiverad som har två rader */
+
+#md-page-menu a.active {
+  display: block;
+}
+
+
+.annotator-adder:before {
+box-sizing: content-box !important;
+}
+
+
+/* BÖS som jag inte använder, men som bör vara kvar? */
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small {
+    font-weight: normal;
+    line-height: 1;
+    color: #999
+
+}
+
+h1 small,
+.h1 small {
+    font-size: 29px
+}
+h2 small,
+.h2 small {
+    font-size: 22px
+}
+h3 small,
+.h3 small,
+h4 small,
+.h4 small {
+    font-size: 17px
+    }

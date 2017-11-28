@@ -1,0 +1,9 @@
+#md-main-navbar {
+max-width:1048px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* Nedan kanske borde in via sass i huvud-css? */
+
+iframe.md-external {margin-top: 8px !important; margin-bottom: 4px !important}
